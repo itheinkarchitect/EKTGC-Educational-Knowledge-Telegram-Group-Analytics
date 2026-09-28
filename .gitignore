@@ -1,0 +1,47 @@
+# Виртуальное окружение
+.venv/
+venv/
+env/
+
+# Переменные окружения и секреты
+.env
+.env.*
+!.env.example
+
+# Telegram-сессии
+*.session
+*.session-journal
+
+# Excel и локальные данные
+*.xlsx
+*.xls
+*.csv
+
+# Локальные базы данных
+*.db
+*.sqlite
+*.sqlite3
+
+# Файлы настройки проекта
+setup.py
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Логи
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Временные файлы
+*.tmp
+*.temp
+*.bak
