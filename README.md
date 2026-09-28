@@ -1,4 +1,3 @@
-```markdown
 # EKTGC — Educational Knowledge & Telegram Group Analytics
 
 A self-hosted Python tool for analyzing message readership in Telegram groups.
