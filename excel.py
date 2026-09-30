@@ -1,5 +1,6 @@
 import os
 from openpyxl import Workbook, load_workbook
+from datetime import datetime
 
 FILE_NAME = "analytics.xlsx"
 
@@ -46,13 +47,16 @@ def save_readings(message, readers):
         if record in existing_records:
             continue
 
+        message_date = message.date.replace(tzinfo=None)
+        read_at = reader["read_at"].replace(tzinfo=None)
+
         sheet.append([
             message.id,
-            message.date,
+            message_date,
             reader["user_id"],
             reader["first_name"],
             reader["last_name"],
-            reader["read_at"]
+            read_at
         ])
 
         existing_records.add(record)
