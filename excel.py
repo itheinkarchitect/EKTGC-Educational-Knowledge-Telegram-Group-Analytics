@@ -6,6 +6,7 @@ FILE_NAME = "analytics.xlsx"
 
 HEADERS = [
     "ID сообщения",
+    "Сообщение",
     "Дата сообщения",
     "ID пользователя",
     "Имя",
@@ -52,6 +53,7 @@ def save_readings(message, readers):
 
         sheet.append([
             message.id,
+            message.text,
             message_date,
             reader["user_id"],
             reader["first_name"],
